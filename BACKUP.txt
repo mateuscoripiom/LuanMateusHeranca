@@ -1,0 +1,259 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace LuanMateusHeranca
+{
+    public partial class Form2 : Form
+    {
+        Professor professor;
+        public Form2()
+        {
+            InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btncadprof_Click(object sender, EventArgs e)
+        {
+            professor = new Professor(txtnomeprof.Text, (Convert.ToInt32(txtidadeprof.Text)), txttitulaprof.Text);
+            txtnomeprof.Clear();
+            txtidadeprof.Clear();
+            txttitulaprof.Clear();
+        }
+
+        private void btnexibirprof_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(professor.ImprimeDados());
+        }
+
+        private void btnvoltarprof_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 principal = new Form1();
+            principal.Show();
+        }
+    }
+}
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace LuanMateusHeranca
+{
+    public partial class Form3 : Form
+    {
+        Aluno aluno;
+        public Form3()
+        {
+            InitializeComponent();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtnomeprof_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btncadaluno_Click(object sender, EventArgs e)
+        {
+            aluno = new Aluno(txtnomealuno.Text, (Convert.ToInt32(txtidadealuno.Text)), txtcursoaluno.Text);
+            txtnomealuno.Clear();
+            txtidadealuno.Clear();
+            txtcursoaluno.Clear();
+        }
+
+        private void btnexibiraluno_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(aluno.ImprimeDados());
+        }
+
+        private void btnvoltaraluno_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 principal = new Form1();
+            principal.Show();
+        }
+    }
+}
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace LuanMateusHeranca
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form2 professor = new Form2();
+            professor.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnaluno_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form3 aluno = new Form3();
+            aluno.Show();
+        }
+    }
+ 
+}
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LuanMateusHeranca
+{
+    public class Professor : Pessoa
+    {
+        private string titulacao;
+
+        public Professor()
+        {
+            this.titulacao = null;
+        }
+
+        public Professor(string nome, int idade, string titulacao)
+
+        {
+            this.Nome = nome;
+            this.Idade = idade;
+            this.Titulacao = titulacao;
+        }
+
+        public string Titulacao
+        {
+            get { return titulacao; }
+            set { titulacao = value; }
+        }
+
+        public override string ImprimeDados()
+        {
+            String s = String.Empty;
+            s = String.Concat(this.Nome, " ", this.Idade.ToString(), " ", this.Titulacao);
+            return s;
+        }
+    }
+}
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LuanMateusHeranca
+{
+    public abstract class Pessoa
+    {
+        private string nome;
+        private int idade;
+        public Pessoa()
+        {
+            this.nome = null;
+            this.idade = 0;
+        }
+
+        public Pessoa(string nome, int idade)
+        {
+            this.nome = nome;
+            this.idade = idade;
+        }
+
+        public string Nome
+        {
+            get { return nome; }
+            set { nome = value; }
+        }
+
+        public int Idade
+        {
+            get { return idade; }
+            set { idade = value; }
+        }
+
+        public abstract String ImprimeDados();
+    }
+}
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LuanMateusHeranca
+{
+    public class Aluno : Pessoa
+    {
+        private string curso;
+
+        public Aluno()
+        {
+            this.curso = null;
+        }
+
+        public Aluno(string nome, int idade, string curso)
+
+        {
+            this.Nome = nome;
+            this.Idade = idade;
+            this.Curso = curso;
+        }
+
+        public string Curso
+        {
+            get { return curso; }
+            set { curso = value; }
+        }
+
+        public override string ImprimeDados()
+        {
+            String s = String.Empty;
+            s = String.Concat(this.Nome, " ", this.Idade.ToString(), " ", this.Curso);
+            return s;
+        }
+    }
+}
