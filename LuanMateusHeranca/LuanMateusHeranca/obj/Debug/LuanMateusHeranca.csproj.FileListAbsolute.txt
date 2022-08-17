@@ -1,0 +1,13 @@
+C:\Users\2etimds\source\repos\LuanMateusHeranca\LuanMateusHeranca\bin\Debug\LuanMateusHeranca.exe.config
+C:\Users\2etimds\source\repos\LuanMateusHeranca\LuanMateusHeranca\bin\Debug\LuanMateusHeranca.exe
+C:\Users\2etimds\source\repos\LuanMateusHeranca\LuanMateusHeranca\bin\Debug\LuanMateusHeranca.pdb
+C:\Users\2etimds\source\repos\LuanMateusHeranca\LuanMateusHeranca\obj\Debug\LuanMateusHeranca.csproj.AssemblyReference.cache
+C:\Users\2etimds\source\repos\LuanMateusHeranca\LuanMateusHeranca\obj\Debug\LuanMateusHeranca.csproj.SuggestedBindingRedirects.cache
+C:\Users\2etimds\source\repos\LuanMateusHeranca\LuanMateusHeranca\obj\Debug\LuanMateusHeranca.Form1.resources
+C:\Users\2etimds\source\repos\LuanMateusHeranca\LuanMateusHeranca\obj\Debug\LuanMateusHeranca.Form2.resources
+C:\Users\2etimds\source\repos\LuanMateusHeranca\LuanMateusHeranca\obj\Debug\LuanMateusHeranca.Form3.resources
+C:\Users\2etimds\source\repos\LuanMateusHeranca\LuanMateusHeranca\obj\Debug\LuanMateusHeranca.Properties.Resources.resources
+C:\Users\2etimds\source\repos\LuanMateusHeranca\LuanMateusHeranca\obj\Debug\LuanMateusHeranca.csproj.GenerateResource.cache
+C:\Users\2etimds\source\repos\LuanMateusHeranca\LuanMateusHeranca\obj\Debug\LuanMateusHeranca.csproj.CoreCompileInputs.cache
+C:\Users\2etimds\source\repos\LuanMateusHeranca\LuanMateusHeranca\obj\Debug\LuanMateusHeranca.exe
+C:\Users\2etimds\source\repos\LuanMateusHeranca\LuanMateusHeranca\obj\Debug\LuanMateusHeranca.pdb
